@@ -1,0 +1,74 @@
+{
+  "date_pattern": "20260225",
+  "filename_contains_date": true,
+  "retry_count": 3,
+  "retry_delay_sec": 5,
+  "heartbeat_seconds": 30,
+  "db": {
+    "connection_string": "DRIVER={ODBC Driver 17 for SQL Server};SERVER=YOUR_SQL_SERVER;DATABASE=YOUR_DB;UID=YOUR_USER;PWD=YOUR_PASSWORD;TrustServerCertificate=yes;"
+  },
+  "mail": {
+    "smtp_host": "YOUR_SMTP_HOST",
+    "smtp_port": 25,
+    "from_addr": "Naveen.Thiyagasundaram@caresource.com",
+    "internal_team": [
+      "Hari.shankaran@caresource.com"
+    ],
+    "team1": [
+      "Thamaraipriya.Madhaiyan@caresource.com"
+    ],
+    "timeout_sec": 15
+  },
+  "sla": {
+    "default_sla_minutes": 150,
+    "large_file_threshold_mb": 700,
+    "large_file_estimated_minutes": 180,
+    "progress_mail_interval_minutes": 30
+  },
+  "steps": [
+    {
+      "name": "Step1",
+      "folder": "C:\\Users\\karun\\Downloads\\ALT\\01_VU\\Altruista",
+      "expected_extension": ".txt",
+      "expected_count": 2,
+      "start_time_ist": "06:00",
+      "end_time_ist": "08:30",
+      "stuck_minutes": 5,
+      "polling_seconds": 2,
+      "require_prev_step_match": false
+    },
+    {
+      "name": "Step2",
+      "folder": "C:\\Users\\karun\\Downloads\\ALT\\Step2",
+      "expected_extension": ".txt",
+      "expected_count": 2,
+      "start_time_ist": "06:00",
+      "end_time_ist": "08:30",
+      "stuck_minutes": 5,
+      "polling_seconds": 2,
+      "require_prev_step_match": true
+    },
+    {
+      "name": "Step3",
+      "folder": "C:\\Users\\karun\\Downloads\\ALT\\Step_3",
+      "expected_extension": ".edi",
+      "expected_count": 2,
+      "start_time_ist": "06:00",
+      "end_time_ist": "08:30",
+      "stuck_minutes": 5,
+      "polling_seconds": 2,
+      "require_prev_step_match": true
+    },
+    {
+      "name": "Step4",
+      "folder": "C:\\Users\\karun\\Downloads\\ALT\\Step4",
+      "expected_extension": ".edi",
+      "expected_count": 2,
+      "start_time_ist": "06:00",
+      "end_time_ist": "08:30",
+      "stuck_minutes": 5,
+      "polling_seconds": 2,
+      "require_prev_step_match": true
+    }
+  ]
+}
